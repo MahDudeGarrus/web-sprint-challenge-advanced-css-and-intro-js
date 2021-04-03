@@ -139,6 +139,20 @@ button:hover{
 .artist img{
     width:100%;
 }
+
+/* Tablet viewport at 800px*/
+@media (max-width:800px){
+    nav{
+        width: 40%;             /*Increased the Nav width to help spread the links apart*/
+    }
+
+    .title-container div{
+        background-size: 250%;      /*Resizing the background image to fit the container*/
+        height: 40vh;               /*Changed height to style background for table view*/
+    }
+}
+
+
 /*Mobile Phone viewport at 500px*/
 @media (max-width:500px){
      
@@ -180,4 +194,5 @@ button:hover{
     .artist .bio {
         font-size: 1rem;            /*Decreased the size of font of the artists' bios for better fit*/
     }
+    /* End for @media 500px*/
 }
