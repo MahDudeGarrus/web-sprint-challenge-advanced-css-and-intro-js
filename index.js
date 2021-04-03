@@ -209,14 +209,24 @@ Practice accessing data above by console.log-ing following items:
 
 //(1) Name of the first artist (0th index) in the array
 
+console.log(artists[0]);    // returned the key and value for index 0 Amedeo Modigliani in the terminal
+
+
 
 //(2) Bio of the third artist (2nd index) in the array 
+
+console.log(artists[2].bio);   // returned the key:bio  for the second index: Diego Rivera in the terminal
+
 
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 (no function needed) 
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Use an array method to fix this issue and console.log() to check your work. */
+
+console.log(artists[8].name = 'Vincent Van Gogh');    // This is to change the value of the name key.
+console.log(artists[8]);      // I console.log the entire index to check if the changes were made to the index.
+
 
 
 
@@ -228,10 +238,11 @@ There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is current
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
+function getArtistByIndex(array, index) {
+  const artistString = `the artist at index ${array[index].id} is ${array[index].name}`;    // created a variable to supply a location for the string.
+  return artistString;    // returned the string by using its variable name.
 }  
-
+console.log(getArtistByIndex(artists, 5)); // should return the string for Salvador Dali at index 5.
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -242,10 +253,17 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
+function get20s(array){
+  let artistInTwentieth = [];
+  for (let i = 0; i < array.length; i++){                   // This will loop through the array one by one.
+    if(array[i].years === '1904 - 1989' || array[i].years === '1907 - 1954'){       //This condition will look for these particular strings.// I am very sure there is a correct way to do this, but it is beyond my knowledge.
+      artistInTwentieth.push(array[i].name);                  //This will push the findings to the new array.
+    }
+  }
+  return artistInTwentieth;                 //This will return the results of the new array.
 }
 
+console.log(get20s(artists));               //The cosole log will run the function with the artists object.
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -257,10 +275,11 @@ function get20s(/*Your Code Here*/){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
-   /*Your Code Here*/
+function removeArtist(array, index){      // set my parameters
+   array.splice(index, 1);                // .splice removes the chosen index and how many to remove
+   return array.length;                   // this returns the length of the mutated array // 19
 }
-   
+console.log(removeArtist(artists, 13));   // should return 19 // removed Pablo Picasso
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -278,10 +297,18 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(array){              //set parameter
+    array.push ({                       //.push will add new data to the end. Needed to put quotes around the keys since this data is inside an array and not an object.
+      "id": "20",
+      "name": "Stephanie Ann Solis", 
+      "years": "1989 - current day",
+      "genre": "Web Design", 
+      "nationality": "American",
+      "bio": "I am a student at Lambda and I am working on becoming software developer. I am currently learning HTML, CSS, JavaScript, Java, SQL, and C#. I lived in Korea for 7 years and can speak a little Korean. I can also speak Spanish and English."
+    });
+    return array;           // should return the new array with added data
   }
-
+console.log(addArtist(artists));    // console returned my new data in terminal.
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -291,9 +318,17 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/){
-  /*Your Code Here*/
+function lotsOfArt(array){          //set parameters
+  const moreThanHundred = [];       //created empty array to push loop findings to.
+  for (let i = 0; i < array.length; i++){   //loop will search through each index
+    if (array[i].paintings > 100){          //the conditions for the loop set
+      moreThanHundred.push(array[i].name);  //if the index passes the conditions, the name will be pushed into empty array
+    }   
+  }
+  return moreThanHundred;           //returns new array
 }
+
+console.log(lotsOfArt(artists));    //results logged the array  of names that had more than 100 paintings. Pablo Picasso was deleted in task 5 so will not show in results.
 
 
 
@@ -320,7 +355,7 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
+function getHTML(data){
 
     /* Code here */
 

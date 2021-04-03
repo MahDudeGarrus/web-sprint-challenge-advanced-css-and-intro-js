@@ -20,6 +20,11 @@ font: inherit;
 vertical-align: baseline;  
 }
 /*GENERAL STYLES*/
+
+*{
+    max-width:100%;     /* This is going to keep the horizontal scrollbar away since nothing can be bigger than the screen size*/
+}
+
 html{
     font-size:62.5%;
 }
@@ -133,4 +138,74 @@ button:hover{
 }
 .artist img{
     width:100%;
+}
+
+/* Tablet viewport at 800px*/
+@media (max-width:800px){
+    nav{
+        width: 40%;             /*Increased the Nav width to help spread the links apart*/
+    }
+
+    nav a{                      /*Resetting for size in navbar*/
+        font-size: 2rem;
+    }
+    .title-container div{
+        background-size: 250%;      /*Resizing the background image to fit the container*/
+        height: 40vh;               /*Changed height to style background for table view*/
+    }
+
+    .artist img{                    /*Resized images to show more content and to better fit the page*/
+        width:150%;
+        height: 20vh;
+    }
+
+    .artist .bio {
+        font-size: 1.2rem;            /*Decreased the size of font of the artists' bios for better fit*/
+    }
+    
+}
+
+
+/*Mobile Phone viewport at 500px*/
+@media (max-width:500px){
+     
+    .title-container div{
+        background-size: 250%;      /*Resizing the background image to fit the container*/
+        width:100%;                  /*This will stetch the container across the screen*/
+        margin-left: 0%;            /*Controls the margins left and right to be at zero*/
+        margin-right: 0%;
+    }
+
+    .title-container hr{
+        width: 100%;                /*This will spread the line below the title image across the screen*/
+    }
+
+    nav{
+        width: 45%;             /*Increased the Nav width to help spread the links apart*/
+    }
+
+    a{
+        font-size: 2rem;        /*The links font will decrease for mobile view*/
+    }
+
+    .artists-container{
+        flex-direction: column;         /*The two artists will be display one on top of the other rather than side by side for better mobile view*/
+        align-items: center;            /*This will align the items on the cross axis*/
+    }
+
+    .artist{
+        width:80%                       /*This will have the artist image and text fit 80% of the screen*/
+    }
+
+    .artist img{
+        width: 80%;                    /*This is setting the image to fit 80% inside of the .artist div*/
+        height: 100%;                   /*The height will control how the image is scaled and fit into the image block*/
+
+
+    }
+
+    .artist .bio {
+        font-size: 1rem;            /*Decreased the size of font of the artists' bios for better fit*/
+    }
+    /* End for @media 500px*/
 }

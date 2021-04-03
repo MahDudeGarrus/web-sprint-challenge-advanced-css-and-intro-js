@@ -24,10 +24,15 @@ Commit your code regularly and meaningfully.
 Please answer the following questions below, you may edit the readme file to include your answers below the question.
 
 1. How would you describe acessibility on the web to someone new to programming?
-2. Talk about 3 different things you can do to ensure your website is accessible. 
-3. How would you explain the concept of a variable to someone new to programming?
-4. What is the purpose of using functions in code?
+    A: Acessibility is important to include in your code so that your page can be viewed or accessed by many typed of people. People who have disabilities are usually who come to mind when making your page acessible.
 
+2. Talk about 3 different things you can do to ensure your website is accessible. 
+    A: 1. You could include an alt text for images to have text appear if an image doesn't load or is not acessible to the page visitor. 2. Make text size scalable so that it can be accessed by different screen sizes. 3. Keep contast colors in mind for those who have trouble viewing colors. You can put an exclamation and message if the visitor caused an error, rather than only outlining the error in the color red.
+
+3. How would you explain the concept of a variable to someone new to programming?
+    A: A variable is an item that we declare and give a value to.  There are 3 types of variable: var, let, and const. Var is the simplest type that can be reassigned and redeclared. It is not adivised to use var unless let and const are not available to use. Var could easily be manipulated since it doesn't have many restrictions. Let is cannot be redeclared, but can be reassigned. Const is the most strict and is advised to be used first. It cannot be redeclared and reassigned. The value could be a string, object, function, number, etc. The basic syntax for a variable is: type variableName = "String as a value";
+4. What is the purpose of using functions in code?
+    A: A function is a mini program that we create to run for many plugins. Instead of coding a repeat of a function for every time we need to use it. We create a function to only be coded once but used as many times as needed. We want a function to be a universal or global as possible, so we must set parameters that can be plugged into the function. When we invoke the function, we would want to plug in arguments that match the parameters to run the function.
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
