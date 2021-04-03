@@ -254,9 +254,16 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
-
+  let artistInTwentieth = [];
+  for (let i = 0; i < array.length; i++){                   // This will loop through the array one by one.
+    if(array[i].years === '1904 - 1989' || array[i].years === '1907 - 1954'){       //This condition will look for these particular strings.
+      artistInTwentieth.push(array[i].name);                  //This will push the findings to the new array.
+    }
+  }
+  return artistInTwentieth;                 //This will return the results of the new array.
 }
 
+console.log(get20s(artists));               //The cosole log will run the function with the artists object.
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -312,16 +319,16 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(array){          //set parameters
-  const moreThanHundred = [];
-  for (let i = 0; i < array.length; i++){
-    if (array[i].paintings > 100){
-      moreThanHundred.push(array[i].name);
+  const moreThanHundred = [];       //created empty array to push loop findings to.
+  for (let i = 0; i < array.length; i++){   //loop will search through each index
+    if (array[i].paintings > 100){          //the conditions for the loop set
+      moreThanHundred.push(array[i].name);  //if the index passes the conditions, the name will be pushed into empty array
     }   
   }
-  return moreThanHundred;
+  return moreThanHundred;           //returns new array
 }
 
-console.log(lotsOfArt(artists));
+console.log(lotsOfArt(artists));    //results logged the array  of names that had more than 100 paintings. Pablo Picasso was deleted in task 5 so will not show in results.
 
 
 
