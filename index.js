@@ -254,17 +254,9 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array){
-  const artistInTwentieth = [];
-  array.years = yearsToNumber Number(array.years('') );
-  for (i = 0; i < array.length; i++){
-    if (array[i].years < 2000 && array[i].years > 1889);{
-      artistInTwentieth.push(array[i]);
-    }
-  }
-  return artistInTwentieth;
+
 }
 
-console.log(get20s(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -276,10 +268,11 @@ console.log(get20s(artists));
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(){
-   /*Your Code Here*/
+function removeArtist(array, index){      // set my parameters
+   array.splice(index, 1);                // .splice removes the chosen index and how many to remove
+   return array.length;                   // this returns the length of the mutated array // 19
 }
-   
+console.log(removeArtist(artists, 13));   // should return 19 // removed Pablo Picasso
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
