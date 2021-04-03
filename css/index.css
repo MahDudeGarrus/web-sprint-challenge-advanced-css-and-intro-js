@@ -163,7 +163,7 @@ button:hover{
 
     .artists-container{
         flex-direction: column;         /*The two artists will be display one on top of the other rather than side by side for better mobile view*/
-        align-items: center;
+        align-items: center;            /*This will align the items on the cross axis*/
     }
 
     .artist{
