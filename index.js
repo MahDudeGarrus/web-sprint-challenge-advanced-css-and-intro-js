@@ -238,10 +238,11 @@ console.log(artists[8]);      // I console.log the entire index to check if the 
  
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
-function getArtistByIndex(/*Your Code Here*/) {
-  /*Your Code Here*/
+function getArtistByIndex(array, index) {
+  let artistString = `the artist at index ${array[index].id} is ${array[index].name}`;    // created a variable to supply a location for the string.
+  return artistString;    // returned the string by using its variable name.
 }  
-
+console.log(getArtistByIndex(artists, 5)); // should return the string for Salvador Dali at index 5.
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
