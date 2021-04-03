@@ -209,7 +209,7 @@ Practice accessing data above by console.log-ing following items:
 
 //(1) Name of the first artist (0th index) in the array
 
-console.log(artists[0]);    // returned the keys and values for index 0 Amedeo Modigliani in the terminal
+console.log(artists[0]);    // returned the key and value for index 0 Amedeo Modigliani in the terminal
 
 
 
@@ -290,10 +290,18 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/){
-    /*Your Code Here*/
+function addArtist(array){              //set parameter
+    array.push ({                       //.push will add new data to the end. Needed to put quotes around the keys since this data is inside an array and not an object.
+      "id": "20",
+      "name": "Stephanie Ann Solis", 
+      "years": "1989 - current day",
+      "genre": "Web Design", 
+      "nationality": "American",
+      "bio": "I am a student at Lambda and I am working on becoming software developer. I am currently learning HTML, CSS, JavaScript, Java, SQL, and C#. I lived in Korea for 7 years and can speak a little Korean. I can also speak Spanish and English."
+    });
+    return array;           // should return the new array with added data
   }
-
+console.log(addArtist(artists));    // console returned my new data in terminal.
   
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
