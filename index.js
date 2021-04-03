@@ -239,7 +239,7 @@ console.log(artists[8]);      // I console.log the entire index to check if the 
  Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(array, index) {
-  let artistString = `the artist at index ${array[index].id} is ${array[index].name}`;    // created a variable to supply a location for the string.
+  const artistString = `the artist at index ${array[index].id} is ${array[index].name}`;    // created a variable to supply a location for the string.
   return artistString;    // returned the string by using its variable name.
 }  
 console.log(getArtistByIndex(artists, 5)); // should return the string for Salvador Dali at index 5.
@@ -253,10 +253,18 @@ Use get20s to do the following:
 Example born in 1901 and died in 1959 - included -- born in 1889 and died in 1925 not included
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(/*Your Code Here*/){
-  /*Your Code Here*/
+function get20s(array){
+  const artistInTwentieth = [];
+  array.years = yearsToNumber Number(array.years('') );
+  for (i = 0; i < array.length; i++){
+    if (array[i].years < 2000 && array[i].years > 1889);{
+      artistInTwentieth.push(array[i]);
+    }
+  }
+  return artistInTwentieth;
 }
 
+console.log(get20s(artists));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -268,7 +276,7 @@ function get20s(/*Your Code Here*/){
  
  For example, if removeArtist is invoked with the artists array and the number 0, it will remove Amedeo Modigliani from our dataset and return the number 19. */
 
-function removeArtist(/*Your Code Here*/){
+function removeArtist(){
    /*Your Code Here*/
 }
    
