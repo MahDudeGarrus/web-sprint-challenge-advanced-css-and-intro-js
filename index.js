@@ -256,7 +256,7 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 function get20s(array){
   let artistInTwentieth = [];
   for (let i = 0; i < array.length; i++){                   // This will loop through the array one by one.
-    if(array[i].years === '1904 - 1989' || array[i].years === '1907 - 1954'){       //This condition will look for these particular strings.
+    if(array[i].years === '1904 - 1989' || array[i].years === '1907 - 1954'){       //This condition will look for these particular strings.// I am very sure there is a correct way to do this, but it is beyond my knowledge.
       artistInTwentieth.push(array[i].name);                  //This will push the findings to the new array.
     }
   }
@@ -355,7 +355,7 @@ The function should console.log 50 chunks of HTML code that match the structure 
 
 ‼️ You do **NOT** need to get these to display on your page, but you can copy and paste the result into your HTML file if you'd like to see what that would look like. */
 
-function getHTML(/* Code here */){
+function getHTML(data){
 
     /* Code here */
 
