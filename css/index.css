@@ -146,10 +146,23 @@ button:hover{
         width: 40%;             /*Increased the Nav width to help spread the links apart*/
     }
 
+    nav a{                      /*Resetting for size in navbar*/
+        font-size: 2rem;
+    }
     .title-container div{
         background-size: 250%;      /*Resizing the background image to fit the container*/
         height: 40vh;               /*Changed height to style background for table view*/
     }
+
+    .artist img{                    /*Resized images to show more content and to better fit the page*/
+        width:150%;
+        height: 20vh;
+    }
+
+    .artist .bio {
+        font-size: 1.2rem;            /*Decreased the size of font of the artists' bios for better fit*/
+    }
+    
 }
 
 
